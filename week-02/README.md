@@ -88,7 +88,7 @@ Untuk melakukan pengujian relasional, maka gunakan operator sebagai berikut:
 - '<=' memeriksa apakah operan kiri kurang dari atau sama dengan operan kanan
 #### Logical operators
 Operator logika di Dart adalah operator yang diterapkan pada operan bool; bisa berupa variabel, ekspresi, atau kondisi.
-- !expression negasi atau kebalikan hasil ekspresi—yaitu, true menjadi false dan false menjadi true.
+- !expression negasi atau kebalikan hasil ekspresi yaitu, true menjadi false dan false menjadi true.
 - || menerapkan operasi logika OR antara dua ekspresi.
 - && menerapkan operasi logika AND antara dua ekspresi.
 
