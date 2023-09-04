@@ -1,8 +1,6 @@
-| Nama                                | Kelas   | NIM        |
-| ----------------------------------- | ------- | ---------- |
-| Ulfi Mustatiq Abidatul Izza (Izza)  | TI-3H   | 2141720052 |
-
-
+| Nama                                | Kelas | NIM        |
+| ----------------------------------- | ----- | ---------- |
+| Ulfi Mustatiq Abidatul Izza         | TI-3H | 2141720052 |
 
 
 # Soal Nomor 1
