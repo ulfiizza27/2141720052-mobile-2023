@@ -17,6 +17,7 @@
 > Penjelasan : Terjadi error yang disebabkan oleh kurangnya kondisi pada perulangan if yaitu *if (test){ print("Kebenaran")}* seharusnya **if (test == "test2"){ print("Kebenaran")}**
 
 **PERBAIKAN**
+
 ![Screenshot](docs/Praktikum1_Langkah3.png)
 
 # Praktikum 2: Menerapkan Perulangan "while" dan "do-while"
