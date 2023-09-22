@@ -117,9 +117,13 @@ Kemudian dilakukan mencetak hasil dari kedua Map yaitu gifts dan nobleGases.
 
 ![Screenshot](docs/Prak3_Langkah3Perbaikan.png)
 
+
+![Screenshot](docs/Prak3_Langkah3Soal.png)
+
 ***Penjelasan :***
 
 Pada Langkah diatas dilakukan perbaikan dari kode sebelumnya dengan melakukan inisialisasi variabel mhs1 dan mhs2. Kemudian juga menambahakan nama dan nim pada setiap variabel sehingga akan menampilkan output seperti diatas.
+
 
 # Praktikum 4: Eksperimen Tipe Data List: Spread dan Control-flow Operators
 ### Langkah 1
