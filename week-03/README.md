@@ -17,6 +17,7 @@
 > Penjelasan : Terjadi error yang disebabkan oleh kurangnya kondisi pada perulangan if yaitu *if (test){ print("Kebenaran")}* seharusnya **if (test == "test2"){ print("Kebenaran")}**
 
 **PERBAIKAN**
+
 ![Screenshot](docs/Praktikum1_Langkah3.png)
 
 # Praktikum 2: Menerapkan Perulangan "while" dan "do-while"
@@ -32,7 +33,7 @@
 ## Langkah 3:
 ![Screenshot](docs/Eror_Praktikum2_Langkah3.png)
 
->Penjelasa : Terjadi error yang disebabkan oleh tidak terdefinisikannya variabel counter sehingga, untuk memperbaikinya dilakukan dengan deklarasi dan dan inisisalisasi terlebih dahulu pada variabel counter yaitu dengan sintaks **int counter = 65**. Dimana nanti ketika kode program dijalankan maka hasilnya akan menampilkan nilai yang dimulai dari angka 65 hingga batas kondisi yang sudah ada yaitu pada (counter < 77).
+>Penjelasan : Terjadi error yang disebabkan oleh tidak terdefinisikannya variabel counter sehingga, untuk memperbaikinya dilakukan dengan deklarasi dan dan inisisalisasi terlebih dahulu pada variabel counter yaitu dengan sintaks **int counter = 65**. Dimana nanti ketika kode program dijalankan maka hasilnya akan menampilkan nilai yang dimulai dari angka 65 hingga batas kondisi yang sudah ada yaitu pada (counter < 77).
 
 **PERBAIKAN**
 ![Screenshot](docs/Praktikum2_Langkah3.png)
