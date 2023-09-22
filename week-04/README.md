@@ -11,6 +11,7 @@
 ### Langkah 2
 
 ![Screenshot](docs/Prak1_Langkah2.png)
+
 ***Penjelasan :***
 Tidak terdapat error 
 - *var list = [1, 2, 3];* terdapat variabel list yang merupakan sebuah array dengan tiga elemen, yaitu 1, 2, 3.
@@ -180,7 +181,7 @@ Maka untuk memperbaikinya dilakukan deklarasi pada var promoActive yaitu dengan 
 
 ![Screenshot](docs/Prak4_Langkah5Eror.png)
 
-***Perbaikan :***
+***Penjelasan :***
 
 Terjadi error pada kode program diatas yang diseabkan oleh var login yang belum terdefinisi.
 
@@ -271,7 +272,9 @@ Pada langkah diatas dilakukan penambahan record dengan nama dan NIM, kemudian di
 
 # Tugas Praktikum
 
-### 1. Jelaskan yang dimaksud Functions dalam bahasa Dart!
+### 1. Silakan selesaikan Praktikum 1 sampai 5, lalu dokumentasikan berupa screenshot hasil pekerjaan Anda beserta penjelasannya!
+
+### 2. Jelaskan yang dimaksud Functions dalam bahasa Dart!
 
 ***Jawab***
 
