@@ -1,10 +1,10 @@
-void main(){
-    int index;
+// void main(){
+//     int index;
 
-    for (index = 10; index < 27; index++) {
-        print(index);
-    }
-}
+//     for (index = 10; index < 27; index++) {
+//         print(index);
+//     }
+// }
 
 void main() {
     for (int index = 1; index <= 21; index++) {
