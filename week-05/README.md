@@ -8,7 +8,7 @@
 
 Membuat project flutter baru dengan nama **hello_world**
 
-![Screenshot hello_wolrd](images/project_baru.png)
+![Screenshot hello_wolrd](hello_world/images/project_baru.png)
 
 # Praktikum 2: Membuat Repository GitHub dan Laporan Praktikum
 
@@ -16,7 +16,7 @@ Membuat project flutter baru dengan nama **hello_world**
 
 A new Flutter project
 
-![Screenshot hello_wolrd](images/01.png)
+![Screenshot hello_wolrd](hello_world/images/01.png)
 
 # Praktikum 3: Menerapkan Widget Dasar
 
@@ -24,45 +24,45 @@ A new Flutter project
 
 Mengganti teks menjadi nama lengkap saya dan berwarna merah.
 
-![Screenshot hello_wolrd](images/p3_1.png)
+![Screenshot hello_wolrd](hello_world/images/p3_1.png)
 
 #### Langkah 2: Image Widget
 
 Menambahkan logo polinema.
 
-![Screenshot hello_wolrd](images/p3_2.png)
+![Screenshot hello_wolrd](hello_world/images/p3_2.png)
 
 # Praktikum 4: Menerapkan Widget Material Design dan iOS Cupertino
 
 #### Langkah 1: Cupertino Button dan Loading Bar
 
-![Screenshot hello_wolrd](images/p4_1.png)
+![Screenshot hello_wolrd](hello_world/images/p4_1.png)
 
 #### Langkah 2: Floating Action Button (FAB)
 
-![Screenshot hello_wolrd](images/p4_2.png)
+![Screenshot hello_wolrd](hello_world/images/p4_2.png)
 
 #### Langkah 3: Scaffold Widget
 
-![Screenshot hello_wolrd](images/p4_3.png)
+![Screenshot hello_wolrd](hello_world/images/p4_3.png)
 
 #### Langkah 4: Dialog Widget
 
 Menambahkan dialog widget berupa alert dialog.
 
-![Screenshot hello_wolrd](images/p4_4.png)
+![Screenshot hello_wolrd](hello_world/images/p4_4.png)
 
 #### Langkah 5: Input dan Selection Widget
 
 Menambahkan widget berupa input field untuk menerima inputan dari user, pada langkah ini dilakukan penambahkan TextField.
 
-![Screenshot hello_wolrd](images/p4_5.png)
+![Screenshot hello_wolrd](hello_world/images/p4_5.png)
 
 #### Langkah 6: Date and Time Pickers
 
 Menambahkan selection widget berupa date and time pickers.
 
-![Screenshot hello_wolrd](images/dateandtime.gif)
+![Screenshot hello_wolrd](hello_world/images/dateandtime.gif)
 
 
 
@@ -70,23 +70,21 @@ Menambahkan selection widget berupa date and time pickers.
 
 1. Selesaikan Praktikum 1 sampai 4, lalu dokumentasikan dan push ke repository Anda berupa screenshot setiap hasil pekerjaan beserta penjelasannya di file README.md!
 2. Pada praktikum 4 mulai dari Langkah 3 sampai 6, buatlah file widget tersendiri di folder basic_widgets, kemudian pada file main.dart cukup melakukan import widget sesuai masing-masing langkah tersebut!
-3. Selesaikan Codelabs: Your first Flutter app, lalu buatlah laporan praktikumnya dan push ke repository GitHub Anda!
+3. Selesaikan Codelabs: [Your first Flutter app](https://codelabs.developers.google.com/codelabs/flutter-codelab-first#0), lalu buatlah laporan praktikumnya dan push ke repository GitHub Anda!
 4. README.md berisi: capture hasil akhir tiap praktikum (side-by-side, bisa juga berupa file GIF agar terlihat proses perubahan ketika ada aksi dari pengguna) di browser dan perangkat fisik (device) dengan menampilkan NIM dan Nama Anda sebagai ciri pekerjaan Anda. Jika mode developer di perangkat HP Anda belum aktif, silakan cari di internet cara mengaktifkannya!
 5. Kumpulkan berupa link repository/commit GitHub Anda ke tautan spreadsheet yang telah disepakati oleh dosen!
 
 ***Jawab***
 
-Link jawaban soal nomor 3 [klik disini](https://github.com/ulfiizza27/2141720052-mobile-2023/tree/main/week-05/ulfi_app)
+### 2. Mengimplementasikan Praktikum 4 Langkah 3 - 6
 
-Mengimplementasikan Praktikum 4 Langkah 3 - 6
+a. Membuat file widget class alert_dialog_widget, yang berisi function untuk menampilkan alert
 
-1. Membuat file widget class alert_dialog_widget, yang berisi function untuk menampilkan alert
+b. Membuat file widget class date_time_picker_widget, yang berisi function untuk menampilkan date and time picker
 
-2. Membuat file widget class date_time_picker_widget, yang berisi function untuk menampilkan date and time picker
+c. Membuat file widget class text_field_widget, yang berisi function untuk menampilkan text field
 
-3. Membuat file widget class text_field_widget, yang berisi function untuk menampilkan text field
-
-4. Import class class alert_dialog_widget, date_time_picker_widget, text_field_widget pada main.dart
+d. Import class class alert_dialog_widget, date_time_picker_widget, text_field_widget pada main.dart
 
 ``` dart
 import 'basic_widgets/alert_dialog_widget.dart';
@@ -94,7 +92,7 @@ import 'basic_widgets/text_field_widget.dart';
 import 'basic_widgets/date_time_picker_widget.dart';
 ```
 
-5. Panggil MyTextField, AlertButton, MyDateTimePicker pada main.dart
+e. Panggil MyTextField, AlertButton, MyDateTimePicker pada main.dart
 
 ```dart
 children: <Widget>[
@@ -105,4 +103,8 @@ children: <Widget>[
     MyDateTimePicker(), //Button DateTime
 ```
 
-![Screenshot hello_wolrd](images/tugas.gif)
+![Screenshot hello_wolrd](hello_world/images/tugas.gif)
+
+
+### 3. Link jawaban soal nomor 3 
+[klik disini](https://github.com/ulfiizza27/2141720052-mobile-2023/tree/main/week-05/ulfi_app)
