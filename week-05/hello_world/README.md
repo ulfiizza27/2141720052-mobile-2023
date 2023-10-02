@@ -18,6 +18,8 @@ A new Flutter project
 
 ![Screenshot hello_wolrd](images/01.png)
 
+![Screenshot hello_wolrd](images/andro_p2_l11.png)
+
 # Praktikum 3: Menerapkan Widget Dasar
 
 #### Langkah 1: Text Widget
@@ -26,11 +28,16 @@ Mengganti teks menjadi nama lengkap saya dan berwarna merah.
 
 ![Screenshot hello_wolrd](images/p3_1.png)
 
+![Screenshot hello_wolrd](images/andro_p3_l1.png)
+
+
 #### Langkah 2: Image Widget
 
 Menambahkan logo polinema.
 
 ![Screenshot hello_wolrd](images/p3_2.png)
+
+![Screenshot hello_wolrd](images/andro_p3_l2.png)
 
 # Praktikum 4: Menerapkan Widget Material Design dan iOS Cupertino
 
@@ -46,11 +53,15 @@ Menambahkan logo polinema.
 
 ![Screenshot hello_wolrd](images/p4_3.png)
 
+![Screenshot hello_wolrd](images/andro_p4_l3.png)
+
 #### Langkah 4: Dialog Widget
 
 Menambahkan dialog widget berupa alert dialog.
 
 ![Screenshot hello_wolrd](images/p4_4.png)
+
+![Screenshot hello_wolrd](images/andro_p4_l4.png)
 
 #### Langkah 5: Input dan Selection Widget
 
@@ -58,11 +69,15 @@ Menambahkan widget berupa input field untuk menerima inputan dari user, pada lan
 
 ![Screenshot hello_wolrd](images/p4_5.png)
 
+![Screenshot hello_wolrd](images/andro_p4_l5.png)
+
 #### Langkah 6: Date and Time Pickers
 
 Menambahkan selection widget berupa date and time pickers.
 
 ![Screenshot hello_wolrd](images/dateandtime.gif)
+
+![Screenshot hello_wolrd](images/andro_date.gif)
 
 
 
