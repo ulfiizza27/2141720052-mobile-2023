@@ -24,7 +24,7 @@ A new Flutter project
 
 #### Langkah 1: Text Widget
 
-Mengganti teks menjadi nama lengkap saya dan berwarna merah.
+Membuat folder baru basic_widgets di dalam folder lib. Kemudian buat file baru di dalam basic_widgets dengan nama text_widget.dart. Juga dilakukan pengganti teks menjadi nama lengkap saya dan berwarna merah.
 
 ![Screenshot hello_wolrd](hello_world/images/p3_1.png)
 
@@ -33,7 +33,7 @@ Mengganti teks menjadi nama lengkap saya dan berwarna merah.
 
 #### Langkah 2: Image Widget
 
-Menambahkan logo polinema.
+Membuat sebuah file image_widget.dart di dalam folder basic_widgets. Dan melakukan penambahkan logo polinema.
 
 ![Screenshot hello_wolrd](hello_world/images/p3_2.png)
 
@@ -43,13 +43,19 @@ Menambahkan logo polinema.
 
 #### Langkah 1: Cupertino Button dan Loading Bar
 
+Buat file di folder basic_widgets dengan nama loading_cupertino.dart. Import stateless widget dari material dan cupertino.
+
 ![Screenshot hello_wolrd](hello_world/images/p4_1.png)
 
 #### Langkah 2: Floating Action Button (FAB)
 
+Button widget terdapat beberapa macam pada flutter yaitu ButtonBar, DropdownButton, TextButton, FloatingActionButton, IconButton, OutlineButton, PopupMenuButton, dan ElevatedButton. Buat file di folder basic_widgets dengan nama fab_widget.dart. Import stateless widget dari material.
+
 ![Screenshot hello_wolrd](hello_world/images/p4_2.png)
 
 #### Langkah 3: Scaffold Widget
+
+Scaffold widget digunakan untuk mengatur tata letak sesuai dengan material design.
 
 ![Screenshot hello_wolrd](hello_world/images/p4_3.png)
 
@@ -57,7 +63,7 @@ Menambahkan logo polinema.
 
 #### Langkah 4: Dialog Widget
 
-Menambahkan dialog widget berupa alert dialog.
+Dialog widget pada flutter memiliki dua jenis dialog yaitu AlertDialog dan SimpleDialog. Dan melakukan penambahan dialog widget berupa alert dialog.
 
 ![Screenshot hello_wolrd](hello_world/images/p4_4.png)
 
@@ -65,7 +71,7 @@ Menambahkan dialog widget berupa alert dialog.
 
 #### Langkah 5: Input dan Selection Widget
 
-Menambahkan widget berupa input field untuk menerima inputan dari user, pada langkah ini dilakukan penambahkan TextField.
+Flutter menyediakan widget yang dapat menerima input dari pengguna aplikasi yaitu antara lain Checkbox, Date and Time Pickers, Radio Button, Slider, Switch, TextField. Dan melakukan penambahan widget berupa input field untuk menerima inputan dari user, pada langkah ini dilakukan penambahkan TextField.
 
 ![Screenshot hello_wolrd](hello_world/images/p4_5.png)
 
@@ -73,7 +79,7 @@ Menambahkan widget berupa input field untuk menerima inputan dari user, pada lan
 
 #### Langkah 6: Date and Time Pickers
 
-Menambahkan selection widget berupa date and time pickers.
+Date and Time Pickers termasuk pada kategori input dan selection widget, berikut adalah contoh penggunaan Date and Time Pickers. Dan melakukan penambahkan selection widget berupa date and time pickers.
 
 ![Screenshot hello_wolrd](hello_world/images/dateandtime.gif)
 
@@ -93,13 +99,13 @@ Menambahkan selection widget berupa date and time pickers.
 
 ### 2. Mengimplementasikan Praktikum 4 Langkah 3 - 6
 
-a. Membuat file widget class alert_dialog_widget, yang berisi function untuk menampilkan alert
+- Membuat file widget class alert_dialog_widget, yang berisi function untuk menampilkan alert
 
-b. Membuat file widget class date_time_picker_widget, yang berisi function untuk menampilkan date and time picker
+- Membuat file widget class date_time_picker_widget, yang berisi function untuk menampilkan date and time picker
 
-c. Membuat file widget class text_field_widget, yang berisi function untuk menampilkan text field
+- Membuat file widget class text_field_widget, yang berisi function untuk menampilkan text field
 
-d. Import class class alert_dialog_widget, date_time_picker_widget, text_field_widget pada main.dart
+- Import class class alert_dialog_widget, date_time_picker_widget, text_field_widget pada main.dart
 
 ``` dart
 import 'basic_widgets/alert_dialog_widget.dart';
