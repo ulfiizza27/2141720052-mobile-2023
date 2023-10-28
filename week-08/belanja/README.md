@@ -8,11 +8,12 @@ Pada praktikum 5 ini akan belajar mengenai pembangunan aplikasi bergerak multi h
 
 ## Langkah 1: Siapkan project baru
 
-![Screenshot belanja](assets/p5l1.png)
+![Screenshot belanja](assets/widget1.png)
 
 ## Langkah 2: Mendefinisikan Route pada class home_page.dart dan item_page.dart
 
 - home_page.dart
+
 ```dart
 class HomePage extends StatelessWidget {
   final List<Item> items = [
@@ -37,121 +38,20 @@ class HomePage extends StatelessWidget {
         itemCount: items.length,
         itemBuilder: (context, index) {
           final item = items[index];
-          return InkWell(
-            onTap: () {
-              Navigator.pushNamed(context, '/item', arguments: item); //soal 1
-            },
-            child: Card(
-              child: Padding(
-                padding: const EdgeInsets.all(8),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Hero(
-                      tag: 'productImage${item.name}',
-                      child: AspectRatio(
-                        aspectRatio: 1,
-                        child: Image.asset(item.imageUrl, fit: BoxFit.cover),
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 8),
-                          child: Text(
-                            item.name,
-                            style: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
-                            ),
-                          ),
-                        ),
-                        Row(
-                          children: [
-                            const Icon(
-                              Icons.star,
-                              color: Colors.orange, // Ganti warna bintang menjadi oranye
-                              size: 20, // Ubah ukuran ikon
-                            ),
-                            Text(
-                              item.rating.toString(),
-                              style: const TextStyle(
-                                color: Colors.orange, // Ganti warna rating menjadi oranye
-                                fontSize: 14,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    Text(
-                      'Rp. ${item.price}',
-                      style: const TextStyle(
-                        color: Colors.redAccent,
-                        fontSize: 14,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8),
-                      child: Text(
-                        'Stok: ${item.stok}', // Tampilkan stok di sini
-                        style: const TextStyle(
-                          color: Colors.grey,
-                          fontSize: 14,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          );
+          return CardWidget(item: item);
         },
       ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: Colors.blue,
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(15),
-            topRight: Radius.circular(15),
-          ),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: Text(
-                'Nama: Ulfi Mustatiq Abidatul Izza',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: Text(
-                'NIM: 2141720052',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+      bottomNavigationBar: FooterWidget(), // Gunakan FooterWidget sebagai bottomNavigationBar
     );
   }
 }
 ```
 
 - item_page.dart
+
 ```dart
 class ItemPage extends StatelessWidget {
-  const ItemPage({super.key});
+  const ItemPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -163,63 +63,7 @@ class ItemPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Hero(
-              tag: 'productImage${itemArgs.name}', // Tag harus sama dengan yang di HomePage
-              child: AspectRatio(
-                aspectRatio: 1.5,
-                child: Image.asset(itemArgs.imageUrl),
-              ),
-            ),
-            const SizedBox(height: 16),
-            Text(
-              '${itemArgs.name}',
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 24,
-              ),
-            ),
-            const SizedBox(height: 8),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Rp. ${itemArgs.price}',
-                  style: const TextStyle(
-                    color: Colors.deepOrange,
-                    fontSize: 20,
-                  ),
-                ),
-                Row(
-                  children: [
-                    const Icon(
-                      Icons.star,
-                      color: Colors.orange, // Ganti warna bintang menjadi oranye
-                      size: 20, // Ubah ukuran ikon
-                    ),
-                    Text(
-                      itemArgs.rating.toString(),
-                      style: const TextStyle(
-                        color: Colors.orange, // Ganti warna rating menjadi oranye
-                        fontSize: 16,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            const SizedBox(height: 8),
-            Text(
-              'Stok: ${itemArgs.stok}',
-              style: const TextStyle(
-                color: Colors.grey,
-                fontSize: 16,
-              ),
-            ),
-          ],
-        ),
+        child: DetailItemWidget(item: itemArgs),
       ),
     );
   }
@@ -233,6 +77,209 @@ class ItemPage extends StatelessWidget {
 ## Langkah 4: Membuat data model pada class item.dart
 
 ![Screenshot belanja](assets/p5l4.png)
+
+## Langkah 5: Membuat Widget
+
+- card_widget.dart
+
+```dart
+class CardWidget extends StatelessWidget {
+  final Item item;
+
+  const CardWidget({required this.item, Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, '/item', arguments: item);
+      },
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.all(8),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Hero(
+                tag: 'productImage${item.name}',
+                child: AspectRatio(
+                  aspectRatio: 1,
+                  child: Image.asset(item.imageUrl, fit: BoxFit.cover),
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8),
+                    child: Text(
+                      item.name,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.star,
+                        color: Colors.orange,
+                        size: 20,
+                      ),
+                      Text(
+                        item.rating.toString(),
+                        style: const TextStyle(
+                          color: Colors.orange,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              Text(
+                'Rp. ${item.price}',
+                style: const TextStyle(
+                  color: Colors.redAccent,
+                  fontSize: 14,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: Text(
+                  'Stok: ${item.stok}',
+                  style: const TextStyle(
+                    color: Colors.grey,
+                    fontSize: 14,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
+- detail_item_widget.dart
+
+```dart
+class DetailItemWidget extends StatelessWidget {
+  final Item item;
+
+  const DetailItemWidget({required this.item, Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Hero(
+          tag: 'productImage${item.name}',
+          child: AspectRatio(
+            aspectRatio: 1.5,
+            child: Image.asset(item.imageUrl),
+          ),
+        ),
+        const SizedBox(height: 16),
+        Text(
+          '${item.name}',
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 24,
+          ),
+        ),
+        const SizedBox(height: 8),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Rp. ${item.price}',
+              style: const TextStyle(
+                color: Colors.deepOrange,
+                fontSize: 20,
+              ),
+            ),
+            Row(
+              children: [
+                const Icon(
+                  Icons.star,
+                  color: Colors.orange,
+                  size: 20,
+                ),
+                Text(
+                  item.rating.toString(),
+                  style: const TextStyle(
+                    color: Colors.orange,
+                    fontSize: 16,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+        const SizedBox(height: 8),
+        Text(
+          'Stok: ${item.stok}',
+          style: const TextStyle(
+            color: Colors.grey,
+            fontSize: 16,
+          ),
+        ),
+      ],
+    );
+  }
+}
+```
+
+- footer_widget.dart
+
+```dart
+class FooterWidget extends StatelessWidget {
+  const FooterWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(15),
+          topRight: Radius.circular(15),
+        ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: Text(
+              'Nama: Ulfi Mustatiq Abidatul Izza',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: Text(
+              'NIM: 2141720052',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+```
 
 # Tugas Praktikum
 
