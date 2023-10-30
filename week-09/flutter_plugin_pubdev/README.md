@@ -44,16 +44,16 @@ Buka file main.dart lalu tambahkan di dalam children: pada class _MyHomePageStat
 
 ## **Tugas Praktikum**
 
-1. Selesaikan Praktikum tersebut, lalu dokumentasikan dan push ke repository Anda berupa screenshot hasil pekerjaan beserta penjelasannya di file README.md!
-2. Jelaskan maksud dari langkah 2 pada praktikum tersebut!
+### 1. Selesaikan Praktikum tersebut, lalu dokumentasikan dan push ke repository Anda berupa screenshot hasil pekerjaan beserta penjelasannya di file README.md!
+### 2. Jelaskan maksud dari langkah 2 pada praktikum tersebut!
 
-***Jawab:***
+### ***Jawab:***
 
 Perintah yang diberikan, yaitu **flutter pub add auto_size_text**, digunakan untuk menambahkan plugin "auto_size_text" ke project flutter_plugin_pubdev menggunakan manajer paket pub. Plugin ini, digunakan untuk mengatur ukuran teks secara otomatis agar sesuai dengan ukuran layar perangkat pengguna. Ini berguna untuk memastikan teks tetap terlihat dengan baik dan mudah dibaca.
 
-3. Jelaskan maksud dari langkah 5 pada praktikum tersebut!
+### 3. Jelaskan maksud dari langkah 5 pada praktikum tersebut!
 
-***Jawab:***
+### ***Jawab:***
 
 Pada langkah 5 pada praktikum tersebut mengharuskan Anda untuk mengganti kode return Container() dalam file red_text_widget.dart dengan kode yang menggunakan widget AutoSizeText dari plugin "auto_size_text". Ini bertujuan untuk memanfaatkan plugin tersebut dalam project untuk mengatur ukuran teks secara otomatis dan membatasi teks ke maksimal 2 baris dengan tanda elipsis jika terlalu panjang.
 
@@ -68,9 +68,9 @@ import 'package:auto_size_text/auto_size_text.dart';
 final String text;
 ```
 
-4. Pada langkah 6 terdapat dua widget yang ditambahkan, jelaskan fungsi dan perbedaannya!
+### 4. Pada langkah 6 terdapat dua widget yang ditambahkan, jelaskan fungsi dan perbedaannya!
 
-***Jawab***
+### ***Jawab***
 
 Pada langkah 6, menambahkan dua widget ke dalam widget tree dalam file main.dart. Berikut penjelasan tentang fungsi dan perbedaan kedua widget tersebut:
 
@@ -84,9 +84,9 @@ b. Container dengan Text:
 - Fungsi: Widget ini juga menggunakan Container dengan latar belakang hijau dan berisi widget Text. Teks yang ditampilkan adalah statis, yaitu 'You have pushed the button this many times:'.
 - Perbedaan: Teks adalah statis, tidak menyesuaikan ukuran otomatis, dan tidak menggunakan plugin "auto_size_text".
 
-5. Jelaskan maksud dari tiap parameter yang ada di dalam plugin auto_size_text berdasarkan tautan pada dokumentasi ini !
+### 5. Jelaskan maksud dari tiap parameter yang ada di dalam plugin auto_size_text berdasarkan tautan pada dokumentasi ini !
 
-***Jawab***
+### ***Jawab***
 
 Berikut adalah daftar parameter yang tersedia dalam plugin "auto_size_text" berserta penjelasan fungsinya:
 
