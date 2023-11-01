@@ -8,7 +8,7 @@ Pada praktikum 5 ini akan belajar mengenai pembangunan aplikasi bergerak multi h
 
 ## Langkah 1: Siapkan project baru
 
-![Screenshot belanja](assets/widget1.png)
+![Screenshot belanja](./docs/widget1.png)
 
 ## Langkah 2: Mendefinisikan Route pada class home_page.dart dan item_page.dart
 
@@ -72,11 +72,11 @@ class ItemPage extends StatelessWidget {
 
 ## Langkah 3: Lengkapi Kode di main.dart
 
-![Screenshot belanja](assets/p5l3.png)
+![Screenshot belanja](./docs/p5l3.png)
 
 ## Langkah 4: Membuat data model pada class item.dart
 
-![Screenshot belanja](assets/p5l4.png)
+![Screenshot belanja](./docs/p5l4.png)
 
 ## Langkah 5: Membuat Widget
 
@@ -306,4 +306,4 @@ final itemArgs = ModalRoute.of(context)!.settings.arguments as Item;
 
 ## **Hasil Tampilan Akhir**
 
-![Screenshot belanja](assets/belanja.gif)
+![Screenshot belanja](./docs/belanja.gif)
