@@ -12,9 +12,9 @@ Membuat sebuah project flutter baru dengan nama **layout_flutter**.
 
 Buka file **main.dart** lalu ganti dengan kode berikut. Isi nama dan NIM Anda di text title.
 
-![Screenshot layout_flutter](layout_flutter/images/p1_l2.png)
+![Screenshot layout_flutter](docs/p1_l2.png)
 
-![Screenshot layout_flutter](layout_flutter/images/tampilan_p1_l2.png)
+![Screenshot layout_flutter](./docs/tampilan_p1_l2.png)
 
 ## Langkah 3: Identifikasi layout diagram
 
@@ -30,7 +30,7 @@ Langkah pertama adalah memecah tata letak menjadi elemen dasarnya:
 
 Membuat kolom bagian kiri pada judul. 
 
-![Screenshot layout_flutter](layout_flutter/images/p1_l3.png)
+![Screenshot layout_flutter](./docs/p1_l3.png)
 
 **soal 1** Letakkan widget Column di dalam widget Expanded agar menyesuaikan ruang yang tersisa di dalam widget Row. Tambahkan properti crossAxisAlignment ke CrossAxisAlignment.start sehingga posisi kolom berada di awal baris.
 
@@ -38,7 +38,7 @@ Membuat kolom bagian kiri pada judul.
 
 **soal 3** Dua item terakhir di baris judul adalah ikon bintang, set dengan warna merah, dan teks "41". Seluruh baris ada di dalam Container dan beri padding di sepanjang setiap tepinya sebesar 32 piksel. Kemudian ganti isi body text ‘Hello World' dengan variabel titleSection seperti berikut:
 
-![Screenshot layout_flutter](layout_flutter/images/soal_p1.png)
+![Screenshot layout_flutter](./docs/soal_p1.png)
 
 Kode lengkap untuk file **main.dart**:
 
@@ -112,7 +112,7 @@ Bagian tombol berisi 3 kolom yang menggunakan tata letak yang sama—sebuah ikon
 
 Karena kode untuk membangun setiap kolom hampir sama, buatlah metode pembantu pribadi bernama buildButtonColumn(), yang mempunyai parameter warna, Icon dan Text, sehingga dapat mengembalikan kolom dengan widgetnya sesuai dengan warna tertentu.
 
-![Screenshot layout_flutter](layout_flutter/images/p2_l1.png)
+![Screenshot layout_flutter](./docs/p2_l1.png)
 
 ## Langkah 2: Buat widget buttonSection
 
@@ -120,13 +120,13 @@ Buat Fungsi untuk menambahkan ikon langsung ke kolom. Teks berada di dalam Conta
 
 Bangun baris yang berisi kolom-kolom ini dengan memanggil fungsi dan set warna, Icon, dan teks khusus melalui parameter ke kolom tersebut. Sejajarkan kolom di sepanjang sumbu utama menggunakan MainAxisAlignment.spaceEvenly untuk mengatur ruang kosong secara merata sebelum, di antara, dan setelah setiap kolom. Tambahkan kode berikut tepat di bawah deklarasi titleSection di dalam metode build():
 
-![Screenshot layout_flutter](layout_flutter/images/p2_l2.png)
+![Screenshot layout_flutter](./docs/p2_l2.png)
 
 ## Langkah 3: Tambah button section ke body
 
 Menambahkan variabel buttonSection ke dalam body seperti berikut:
 
-![Screenshot layout_flutter](layout_flutter/images/p2_l3.png)
+![Screenshot layout_flutter](./docs/p2_l3.png)
 
 ## **Tugas Praktikum 2**
 
@@ -137,11 +137,11 @@ Menambahkan variabel buttonSection ke dalam body seperti berikut:
 
 Tentukan bagian teks sebagai variabel. Masukkan teks ke dalam Container dan tambahkan padding di sepanjang setiap tepinya. Tambahkan kode berikut tepat di bawah deklarasi buttonSection:
 
-![Screenshot layout_flutter](layout_flutter/images/p3_l1.png)
+![Screenshot layout_flutter](./docs/p3_l1.png)
 
 ## Langkah 2: Tambahkan variabel text section ke body
 
-![Screenshot layout_flutter](layout_flutter/images/p3_l3.png)
+![Screenshot layout_flutter](./docs/p3_l3.png)
 
 # Praktikum 4: Implementasi image section
 
@@ -149,18 +149,18 @@ Tentukan bagian teks sebagai variabel. Masukkan teks ke dalam Container dan tamb
 
 Anda dapat mencari gambar di internet yang ingin ditampilkan. Buatlah folder images di root project layout_flutter. Masukkan file gambar tersebut ke folder images, lalu set nama file tersebut ke file pubspec.yaml seperti berikut:
 
-![Screenshot layout_flutter](layout_flutter/images/p4_l1.png)
+![Screenshot layout_flutter](./docs/p4_l1.png)
 
 ## Langkah 2: Tambahkan gambar ke body
 
 Tambahkan aset gambar ke dalam body seperti berikut:
 
-![Screenshot layout_flutter](layout_flutter/images/p4_l2.png)
+![Screenshot layout_flutter](./docs/p4_l2.png)
 
 ## Langkah 3: Terakhir, ubah menjadi ListView
 Pada langkah terakhir ini, atur semua elemen dalam ListView, bukan Column, karena ListView mendukung scroll yang dinamis saat aplikasi dijalankan pada perangkat yang resolusinya lebih kecil.
 
-![Screenshot layout_flutter](layout_flutter/images/p4_l3.png)
+![Screenshot layout_flutter](./docs/p4_l3.png)
 
 ## **Tugas Praktikum No 2**
 
