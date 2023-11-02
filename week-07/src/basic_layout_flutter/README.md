@@ -44,7 +44,7 @@ class BlueBox extends StatelessWidget {
 
 **Hasil**
 
-![Screenshot basic_layout_flutter](images/1.png)
+![Screenshot basic_layout_flutter](/week-07/docs/1.png)
 
 ## 2. Axis size and alignment
 
@@ -88,11 +88,11 @@ class BlueBox extends StatelessWidget {
 
 - max
 
-![Screenshot basic_layout_flutter](images/2a.png)
+![Screenshot basic_layout_flutter](/week-07/docs/2a.png)
 
 - min
 
-![Screenshot basic_layout_flutter](images/2b.png)
+![Screenshot basic_layout_flutter](/week-07/docs/2b.png)
 
 ### mainAxisAlignment property
 
@@ -134,27 +134,27 @@ class BlueBox extends StatelessWidget {
 
 - start
 
-![Screenshot basic_layout_flutter](images/2c.png)
+![Screenshot basic_layout_flutter](/week-07/docs/2c.png)
 
 - end 
 
-![Screenshot basic_layout_flutter](images/2d.png)
+![Screenshot basic_layout_flutter](/week-07/docs/2d.png)
 
 - center
 
-![Screenshot basic_layout_flutter](images/2e.png)
+![Screenshot basic_layout_flutter](/week-07/docs/2e.png)
 
 - spaceBetween
 
-![Screenshot basic_layout_flutter](images/2f.png)
+![Screenshot basic_layout_flutter](/week-07/docs/2f.png)
 
 - spaceEvenly
 
-![Screenshot basic_layout_flutter](images/2g.png)
+![Screenshot basic_layout_flutter](/week-07/docs/2g.png)
 
 - spaceAround
 
-![Screenshot basic_layout_flutter](images/2h.png)
+![Screenshot basic_layout_flutter](/week-07/docs/2h.png)
 
 ### crossAxisAlignment property
 
@@ -211,19 +211,19 @@ class BiggerBlueBox extends StatelessWidget {
 
 - start
 
-![Screenshot basic_layout_flutter](images/2i.png)
+![Screenshot basic_layout_flutter](/week-07/docs/2i.png)
 
 - end
 
-![Screenshot basic_layout_flutter](images/2j.png)
+![Screenshot basic_layout_flutter](/week-07/docs/2j.png)
 
 - center
 
-![Screenshot basic_layout_flutter](images/2k.png)
+![Screenshot basic_layout_flutter](/week-07/docs/2k.png)
 
 - stretch
 
-![Screenshot basic_layout_flutter](images/2l.png)
+![Screenshot basic_layout_flutter](/week-07/docs/2l.png)
 
 ## 3. Flexible widget
 
@@ -272,11 +272,11 @@ class BlueBox extends StatelessWidget {
 
 - loose
 
-![Screenshot basic_layout_flutter](images/3a.png)
+![Screenshot basic_layout_flutter](/week-07/docs/3a.png)
 
 - tight
 
-![Screenshot basic_layout_flutter](images/3b.png)
+![Screenshot basic_layout_flutter](/week-07/docs/3b.png)
 
 ## 4. Expanded widget
 
@@ -320,7 +320,7 @@ class BlueBox extends StatelessWidget {
 }
 ```
 
-![Screenshot basic_layout_flutter](images/4a.png)
+![Screenshot basic_layout_flutter](/week-07/docs/4a.png)
 
 ## 5. SizedBox widget
 
@@ -364,15 +364,15 @@ class BlueBox extends StatelessWidget {
 ```
 - Resizing a widget
 
-![Screenshot basic_layout_flutter](images/5a.png)
+![Screenshot basic_layout_flutter](/week-07/docs/5a.png)
 
 - Setelah menambahkan height 100
 
-![Screenshot basic_layout_flutter](images/5b.png)
+![Screenshot basic_layout_flutter](/week-07/docs/5b.png)
 
 - Creating space
 
-![Screenshot basic_layout_flutter](images/5c.png)
+![Screenshot basic_layout_flutter](/week-07/docs/5c.png)
 
 ## 6. Spacer widget
 
@@ -414,11 +414,11 @@ class BlueBox extends StatelessWidget {
 
 - Creating more space
 
-![Screenshot basic_layout_flutter](images/6a.png)
+![Screenshot basic_layout_flutter](/week-07/docs/6a.png)
 
 - Menambahkan spacer diantara blueboc kedua dan ketiga
 
-![Screenshot basic_layout_flutter](images/6b.png)
+![Screenshot basic_layout_flutter](/week-07/docs/6b.png)
 
 ## 7. Text widget
 
@@ -468,11 +468,11 @@ class MyColumn extends StatelessWidget {
 
 - CrossAxisAlignment.center
 
-![Screenshot basic_layout_flutter](images/7a.png)
+![Screenshot basic_layout_flutter](/week-07/docs/7a.png)
 
 - CrossAxisAlignment.baseline
 
-![Screenshot basic_layout_flutter](images/7b.png)
+![Screenshot basic_layout_flutter](/week-07/docs/7b.png)
 
 ## 8. Creating an Icon
 
@@ -508,11 +508,11 @@ class MyColumn extends StatelessWidget {
 
 - Colors.blue
 
-![Screenshot basic_layout_flutter](images/8a.png)
+![Screenshot basic_layout_flutter](/week-07/docs/8a.png)
 
 - Colors.amber
 
-![Screenshot basic_layout_flutter](images/8b.png)
+![Screenshot basic_layout_flutter](/week-07/docs/8b.png)
 
 ## 9. Image widget
 
@@ -536,4 +536,4 @@ class MyColumn extends StatelessWidget {
 }
 ```
 
-![Screenshot basic_layout_flutter](images/9a.png)
+![Screenshot basic_layout_flutter](/week-07/docs/9a.png)

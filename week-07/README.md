@@ -168,4 +168,4 @@ Silakan implementasikan di project baru "basic_layout_flutter" dengan mengakses 
 
 **Jawab**
 
-[basic_layout_flutter](https://github.com/ulfiizza27/2141720052-mobile-2023/tree/main/week-07/basic_layout_flutter)
+[basic_layout_flutter](https://github.com/ulfiizza27/2141720052-mobile-2023/tree/main/week-07/src/basic_layout_flutter)
