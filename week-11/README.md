@@ -59,7 +59,7 @@ beberapa error di langkah 6, karena method yang belum dibuat. Ayo kita buat mula
 
 ### Langkah 14: Hasil
 
-![Screenshot master_plan ](./docs/p1_l14.png)
+![Screenshot master_plan ](./docs/todolist.gif)
 
 # **Tugas Praktikum 1: Dasar State dengan Model-View**
 
@@ -87,7 +87,7 @@ Variabel **plan** pada langkah 6 digunakan untuk menyimpan dan melacak data renc
 
 Membuat to do list secara dinamis
 
-![Screenshot master_plan ](./docs/p1_l14.png)
+![Screenshot master_plan ](./docs/todolist.gif)
 
 
 5. Apa kegunaan method pada Langkah 11 dan 13 dalam lifecyle state ?
