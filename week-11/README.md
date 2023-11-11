@@ -195,7 +195,7 @@ Dari proses sebelumnya menambahkan method untuk menampilkan progress pada bagian
 
 ### Langkah 4: Error
 
-![Screenshot master_plan ](./docs/p3_l4.png)
+Itu akan terjadi error setiap kali memanggil PlanProvider.of(context). Itu terjadi karena screen saat ini hanya menerima tugas-tugas untuk satu kelompok Plan, tapi sekarang PlanProvider menjadi list dari objek plan tersebut.
 
 ### Langkah 5: Tambah getter Plan
 
