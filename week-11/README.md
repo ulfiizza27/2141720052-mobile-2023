@@ -85,7 +85,7 @@ Variabel **plan** pada langkah 6 digunakan untuk menyimpan dan melacak data renc
 
 *Jawab:*
 
-Membuat to do list secara dinamis
+Pada praktikum ini, langkah-langkah pengembangan aplikasi Flutter dimulai dengan pembuatan model data untuk Task dan Plan, penyusunan struktur folder yang terorganisir, serta implementasi antarmuka pengguna dengan fungsi tambahan seperti penanganan keyboard dan scroll view. Hasil akhirnya adalah aplikasi manajemen rencana sederhana yang memberikan pemahaman mendalam tentang konsep dasar pengembangan aplikasi mobile menggunakan Flutter, mencakup manajemen state dan desain responsif.
 
 ![Screenshot master_plan ](./docs/todolist.gif)
 
@@ -173,7 +173,7 @@ Penambahan metode-metode ini membuat kelas Plan lebih mudah digunakan, meningkat
 
 *Jawab:*
 
-Dari proses sebelumnya menambahkan method untuk menampilkan progress pada bagian bawah (footer) secara dinamis.
+Dalam praktikum ini, dilakukan peningkatan pada struktur aplikasi Flutter dengan mengimplementasikan manajemen state menggunakan provider. Langkah-langkahnya mencakup pembuatan PlanProvider sebagai InheritedNotifier untuk menyediakan model data Plan secara global, perubahan pada struktur folder, dan penerapan ValueNotifier. Dengan demikian, model data dapat diakses dan diperbarui secara efisien di seluruh aplikasi, memfasilitasi pemisahan antara tampilan dan manajemen state untuk pengembangan yang lebih terstruktur.
 
 ![Screenshot master_plan ](./docs/todolist2.gif)
 
@@ -282,6 +282,8 @@ Diagram ini mencerminkan struktur dasar aplikasi dengan dua layar utama, **PlanC
 3. Lakukan capture hasil dari Langkah 14 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
 
 *Jawab:*
+
+Pada praktikum ini, dilakukan pengembangan aplikasi Flutter dengan melibatkan manajemen state menggunakan provider. Adanya perubahan melibatkan kelas **PlanProvider** untuk mendukung List dari objek **Plan**, penyesuaian struktur pada main.dart dan plan_screen.dart, serta penambahan fitur pembuatan rencana baru dengan membuat screen **PlanCreatorScreen**. Dengan demikian, aplikasi dapat lebih dinamis, mampu menangani beberapa rencana sekaligus, dan memungkinkan penambahan rencana baru melalui antarmuka pengguna yang lebih sederhana.
 
 ![Screenshot master_plan ](./docs/todolist3.gif)
 
