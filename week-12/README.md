@@ -146,3 +146,11 @@ Jadi, perbedaannya adalah langkah 2 tidak memiliki penanganan kesalahan yang eks
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 6".
 
 ![Screenshot books](./docs/soal6.gif)
+
+# Praktikum 4: Memanggil Future secara paralel
+
+## **Soal 7**
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 7".
+
+![Screenshot books](./docs/soal7.gif)
+
