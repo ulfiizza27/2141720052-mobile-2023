@@ -19,3 +19,24 @@ Tambahkan **nama panggilan** Anda pada title app sebagai identitas hasil pekerja
 - Kemudian cobalah akses di browser URI tersebut dengan lengkap seperti ini. Jika menampilkan data JSON, maka Anda telah berhasil. Lakukan capture milik Anda dan tulis di README pada laporan praktikum. Lalu lakukan commit dengan pesan "W12: Soal 2".
 
 ![Screenshot books](./docs/soal2b.png)
+
+## **Soal 3**
+
+- Jelaskan maksud kode langkah 5 tersebut terkait `substring` dan `catchError`!
+
+```dart
+result = value.body.toString().substring(0, 450);
+```
+Fungsi **substring(0, 450)** digunakan untuk mengambil sebagian dari string yang dihasilkan oleh value.body.toString(). Pada kasus ini, dimulai dari karakter ke-0 hingga karakter ke-449. Artinya, hanya mengambil 450 karakter pertama dari string tersebut.
+
+```dart
+}).catchError((_){
+   result = 'An error occurred';
+   setState(() {});
+});
+```
+**catchError** digunakan untuk menangkap dan menangani kesalahan (error) yang mungkin terjadi selama eksekusi **getData()**. Jika ada kesalahan, blok kode dalam **catchError** akan dieksekusi. Dalam hal ini, jika terjadi kesalahan selama pemanggilan **getData()**, variabel **result** akan diatur menjadi string "An error occurred", dan kemudian **setState((){})** dipanggil untuk memicu pembaruan tampilan.
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 3".
+
+![Screenshot books](./docs/soal3gif.gif)
