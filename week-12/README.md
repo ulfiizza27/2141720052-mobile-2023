@@ -40,3 +40,17 @@ Fungsi **substring(0, 450)** digunakan untuk mengambil sebagian dari string yang
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 3".
 
 ![Screenshot books](./docs/soal3gif.gif)
+
+# Praktikum 2: Menggunakan await/async untuk menghindari callbacks
+
+## **Soal 4**
+
+- Jelaskan maksud kode langkah 1 dan 2 tersebut!
+
+Langkah 1 menambahkan tiga metode asinkron (`returnOneAsync`, `returnTwoAsync`, dan `returnThreeAsync`) yang mensimulasikan operasi asinkron dengan penundaan waktu. 
+
+Langkah 2 menambahkan metode `count` yang menjalankan operasi asinkron pada ketiga metode sebelumnya, menghitung totalnya, dan memperbarui tampilan UI dengan hasilnya.
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 4".
+
+![Screenshot books](./docs/soal4gif.gif)
