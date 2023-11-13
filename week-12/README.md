@@ -167,3 +167,36 @@ Perbedaan utama terletak pada mekanisme pengelolaan future: `FutureGroup` member
 Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 9".
 
 ![Screenshot books](./docs/soal9.gif)
+
+## **Soal 10**
+
+Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!
+
+![Screenshot books](./docs/soal10.gif)
+
+**Langkah 1** 
+
+```dart
+Future returnError() async {
+  await Future.delayed(const Duration(seconds: 2));
+  throw Exception('Something terrible happened!');
+}
+```
+menambahkan metode `returnError()` yang mensimulasikan operasi asinkron dengan penundaan selama 2 detik dan kemudian melempar exception.
+
+**Langkah 4**
+
+```dart
+Future handleError() async {
+  try {
+    await returnError();
+  } catch (error) {
+    setState(() {
+      result = error.toString();
+    });
+  } finally {
+    print('Complete');
+  }
+}
+```
+ menambahkan metode `handleError()` yang mencoba menjalankan `returnError()` dengan menggunakan blok `try-catch`. Jika terjadi exception, pesan error diambil dan diatur ke dalam variabel `result`, sementara itu, pesan 'Complete' dicetak ke konsol dalam blok `finally`. Ini memungkinkan penanganan dan presentasi yang lebih terkendali dari exception di dalam aplikasi.
