@@ -92,3 +92,57 @@ Langkah 2 menambahkan mekanisme untuk menghasilkan nilai asinkron dengan menggun
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 5".
 
 ![Screenshot books](./docs/soal5.gif)
+
+## **Soal 6**
+- Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!
+
+**Langkah 2**
+
+```dart
+Future getNumber() {
+  completer = Completer<int>();
+  calculate();
+  return completer.future;
+}
+```
+
+Pada langkah 2, metode getNumber() memulai operasi asinkron dengan memanggil metode calculate(), dan kemudian mengembalikan Future dari completer. Kesalahan yang mungkin terjadi selama eksekusi operasi asinkron tidak ditangani secara eksplisit.
+
+**Langkah 5**
+
+```dart
+calculate2() async {
+  try {
+    await Future.delayed(const Duration(seconds: 5));
+    completer.complete(42);
+  } catch (_) {
+    completer.completeError({});
+  }
+}
+```
+
+Pada langkah 5, metode calculate2() diubah untuk menangani kesalahan menggunakan blok try-catch. Jika terjadi kesalahan selama penundaan, completer akan menyelesaikan dengan kesalahan.
+
+**Langkah 6**
+
+```dart
+ElevatedButton(
+  child: const Text('GO!'),
+  onPressed: () {
+    getNumber().then((value) {
+      setState(() {
+        result = value.toString();
+      });
+    }).catchError((e) {
+      result = 'An error occurred';
+    });
+  },
+)
+```
+Pada langkah 6, pada fungsi onPressed yang dipanggil saat tombol "GO!" ditekan, penanganan kesalahan ditambahkan menggunakan .catchError. Jika terjadi kesalahan selama operasi asinkron di dalam getNumber(), maka blok catchError akan dijalankan dan variabel result akan diatur sebagai 'An error occurred'.
+
+Jadi, perbedaannya adalah langkah 2 tidak memiliki penanganan kesalahan yang eksplisit, sedangkan langkah 5-6 menambahkan mekanisme untuk menangani kesalahan selama operasi asinkron.
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 6".
+
+![Screenshot books](./docs/soal6.gif)
