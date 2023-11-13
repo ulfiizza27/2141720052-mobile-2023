@@ -54,3 +54,41 @@ Langkah 2 menambahkan metode `count` yang menjalankan operasi asinkron pada keti
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 4".
 
 ![Screenshot books](./docs/soal4gif.gif)
+
+## **Soal 5**
+
+- Jelaskan maksud kode langkah 2 tersebut!
+
+1. Variable `completer`:
+
+```dart
+late Completer completer;
+```
+Variabel ini bertipe Completer, digunakan untuk menyelesaikan (complete) suatu Future. Dalam konteks ini, completer akan digunakan untuk menghasilkan hasil dari operasi asinkron yang dilakukan oleh metode calculate.
+
+2. Metode `getNumber()`:
+
+```dart
+Future getNumber() {
+  completer = Completer<int>();
+  calculate();
+  return completer.future;
+}
+```
+Metode ini membuat instance baru dari Completer, kemudian memanggil metode calculate() dan mengembalikan hasil sebagai Future. Sebagai contoh, jika calculate menghasilkan angka 42, maka getNumber() akan mengembalikan Future dengan nilai 42.
+
+3. Metode `calculate()`:
+```dart
+Future calculate() async {
+  await Future.delayed(const Duration(seconds: 5));
+  completer.complete(42);
+}
+```
+Metode ini mensimulasikan operasi asinkron yang memerlukan waktu (dalam kasus ini, penundaan selama 5 detik dengan Future.delayed) dan kemudian menggunakan completer.complete(42) untuk menyelesaikan Future dengan nilai 42.
+
+**Kesimpulan:**
+Langkah 2 menambahkan mekanisme untuk menghasilkan nilai asinkron dengan menggunakan Completer dan dua metode getNumber() dan calculate(). Dengan ini, saat tombol "GO!" ditekan, getNumber() akan memulai operasi asinkron, dan setelah selesai, nilai 42 akan diterima dan ditampilkan di antarmuka pengguna.
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 5".
+
+![Screenshot books](./docs/soal5.gif)
