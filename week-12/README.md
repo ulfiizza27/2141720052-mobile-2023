@@ -162,3 +162,8 @@ Jelaskan maksud perbedaan kode langkah 1 dan 4!
 **Langkah 4** menggunakan `Future.wait` untuk menunggu sekelompok future selesai. `Future.wait` mengembalikan future tunggal yang menyelesaikan ketika semua future di dalam list selesai. Setelah itu, hasil dari masing-masing future dijumlahkan dan diupdate ke dalam variabel `result` menggunakan `setState`.
 
 Perbedaan utama terletak pada mekanisme pengelolaan future: `FutureGroup` memberikan API yang lebih spesifik untuk mengelola kelompok future, sementara `Future.wait` digunakan untuk menunggu sekelompok future selesai dan memberikan future tunggal sebagai hasil.
+
+## **Soal 9**
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 9".
+
+![Screenshot books](./docs/soal7.gif)

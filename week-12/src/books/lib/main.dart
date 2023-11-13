@@ -75,6 +75,11 @@ class _FuturePageState extends State<FuturePage> {
     }
   }
 
+  Future returnError() async {
+    await Future.delayed(const Duration(seconds: 2));
+    throw Exception('Something terrible happened!');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -85,17 +90,21 @@ class _FuturePageState extends State<FuturePage> {
         child: Column(children: [
           const Spacer(),
           ElevatedButton(
-            child: const Text('GO!'),
             onPressed: () {
-              returnFG();
-              // getNumber().then((value) {
-              //   setState(() {
-              //     result = value.toString();
-              //   });
-              // }).catchError((e) {
-              //   result = 'An error occured';
-              // });
+              returnError()
+                .then((value) {
+                  setState(() {
+                    result = 'Success';
+                  });
+                })
+                .catchError((onError) {
+                  setState(() {
+                    result = onError.toString();
+                  });
+                })
+                .whenComplete(() => print('Complete'));
             },
+            child: const Text('GO!'),
           ),
           const Spacer(),
           Text(result),
