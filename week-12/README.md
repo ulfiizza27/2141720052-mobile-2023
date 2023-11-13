@@ -166,4 +166,4 @@ Perbedaan utama terletak pada mekanisme pengelolaan future: `FutureGroup` member
 ## **Soal 9**
 Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 9".
 
-![Screenshot books](./docs/soal7.gif)
+![Screenshot books](./docs/soal9.gif)
