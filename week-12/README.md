@@ -163,6 +163,8 @@ Jelaskan maksud perbedaan kode langkah 1 dan 4!
 
 Perbedaan utama terletak pada mekanisme pengelolaan future: `FutureGroup` memberikan API yang lebih spesifik untuk mengelola kelompok future, sementara `Future.wait` digunakan untuk menunggu sekelompok future selesai dan memberikan future tunggal sebagai hasil.
 
+# Praktikum 5: Menangani Respon Error pada Async Code
+
 ## **Soal 9**
 Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 9".
 
@@ -200,3 +202,13 @@ Future handleError() async {
 }
 ```
  menambahkan metode `handleError()` yang mencoba menjalankan `returnError()` dengan menggunakan blok `try-catch`. Jika terjadi exception, pesan error diambil dan diatur ke dalam variabel `result`, sementara itu, pesan 'Complete' dicetak ke konsol dalam blok `finally`. Ini memungkinkan penanganan dan presentasi yang lebih terkendali dari exception di dalam aplikasi.
+
+ # Praktikum 6: Menggunakan Future dengan StatefulWidget
+
+ ## **Soal 11**
+Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+
+![Screenshot books](./docs/soal11.png)
+
+![Screenshot books](./docs/soal11.jpeg)
+
