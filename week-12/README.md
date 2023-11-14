@@ -212,3 +212,21 @@ Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerja
 
 ![Screenshot books](./docs/soal11.jpeg)
 
+## **Soal 12**
+- Jika Anda tidak melihat animasi loading tampil, kemungkinan itu berjalan sangat cepat. Tambahkan delay pada method getPosition() dengan kode await Future.delayed(const Duration(seconds: 3));
+
+![Screenshot books](./docs/soal12a.png)
+
+- Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
+
+Ketika menjalankan project Flutter di browser, Flutter web menggunakan izin lokasi dari browser langsung untuk mendapatkan koordinat GPS, tanpa perlu konfigurasi izin khusus seperti pada platform mobile.
+
+**Menjalankan project di browser**
+
+![Screenshot books](./docs/soal12.gif)
+
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 12".
+
+**Menjalankan project di perangkat mobile**
+![Screenshot books](./docs/soal12mobile.gif)
