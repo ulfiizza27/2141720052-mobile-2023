@@ -285,7 +285,7 @@ Dengan penanganan error ini, UI dapat memberikan umpan balik yang lebih informat
 
   - Di layar kedua, terdapat tiga tombol warna: `Pink`, `Green`, dan `Brown`.
 
-  - Saat memilih salah satu tombol warna, misalnya tombol `Red`, aplikasi akan kembali ke layar pertama dan mengubah warna tema menjadi warna merah.
+  - Saat memilih salah satu tombol warna, misalnya tombol `Pink`, aplikasi akan kembali ke layar pertama dan mengubah warna tema menjadi warna Merah muda.
 
   - Pembaharuan warna tema ini akan tercermin pada latar belakang Scaffold pada layar pertama.
 
