@@ -231,6 +231,8 @@ Ketika menjalankan project Flutter di browser, Flutter web menggunakan izin loka
 **Menjalankan project di perangkat mobile**
 ![Screenshot books](./docs/soal12mobile.gif)
 
+# Praktikum 7: Manajemen Future dengan FutureBuilder
+
 ## **Soal 13**
 
 - Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
@@ -258,3 +260,6 @@ Dengan penambahan langkah untuk menangani error pada langkah 5, sekarang UI akan
 Dengan penanganan error ini, UI dapat memberikan umpan balik yang lebih informatif daripada hanya menampilkan elemen UI yang kosong ketika terjadi kesalahan. Hal ini memungkinkan aplikasi lebih responsif terhadap situasi yang tidak diharapkan dan membantu pengguna untuk memahami alasan ketidakberhasilan mendapatkan lokasi.
 
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 14".
+
+![Screenshot books](./docs/soal14.gif)
+
