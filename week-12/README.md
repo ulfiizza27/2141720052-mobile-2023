@@ -263,3 +263,40 @@ Dengan penanganan error ini, UI dapat memberikan umpan balik yang lebih informat
 
 ![Screenshot books](./docs/soal14.gif)
 
+# Praktikum 8: Navigation route dengan Future Function
+
+## **Soal 15**
+
+- Tambahkan **nama panggilan Anda** pada tiap properti `title` sebagai identitas pekerjaan Anda.
+
+- Silakan ganti dengan warna tema favorit Anda.
+
+**Jawab:** 
+
+![Screenshot books](./docs/soal15.png)
+
+## **Soal 16**
+
+- Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+
+**Jawab:**
+
+  - Ketika tombol `Change Color` pada layar pertama **(NavigationFirst)** diklik, aplikasi akan membuka layar kedua (NavigationSecond).
+
+  - Di layar kedua, terdapat tiga tombol warna: `Red`, `Green`, dan `Blue`.
+
+  - Saat memilih salah satu tombol warna, misalnya tombol `Red`, aplikasi akan kembali ke layar pertama dan mengubah warna tema menjadi warna merah.
+
+  - Pembaharuan warna tema ini akan tercermin pada latar belakang Scaffold pada layar pertama.
+
+- Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!
+
+**Jawab:**
+
+![Screenshot books](./docs/soal16a.png)
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 16".
+
+**Jawab:**
+
+![Screenshot books](./docs/soal16.gif)
