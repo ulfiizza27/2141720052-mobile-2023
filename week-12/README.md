@@ -230,3 +230,18 @@ Ketika menjalankan project Flutter di browser, Flutter web menggunakan izin loka
 
 **Menjalankan project di perangkat mobile**
 ![Screenshot books](./docs/soal12mobile.gif)
+
+## **Soal 13**
+
+- Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
+
+**Jawab:**
+Pada praktikum sebelumnya, UI diperbarui menggunakan `setState` setelah mendapatkan posisi, sedangkan pada praktikum terbaru, UI diperbarui dengan menggunakan `FutureBuilder` yang secara otomatis mengelola pembaruan UI berdasarkan status future yang terkait.
+
+Meskipun tampilan UI pada kedua praktikum tetap sama karena memiliki penundaan yang setara (3 detik), pendekatan dengan `FutureBuilder` memberikan keuntungan dalam manajemen asinkron dan pembaruan UI tanpa memerlukan pemanggilan `setState` langsung. Ini menciptakan kode yang lebih bersih dan mudah dimengerti, khususnya saat menangani tugas asinkron seperti pengambilan lokasi.
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 13".
+
+![Screenshot books](./docs/soal13.gif)
+
+- Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.
