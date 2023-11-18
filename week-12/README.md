@@ -283,7 +283,7 @@ Dengan penanganan error ini, UI dapat memberikan umpan balik yang lebih informat
 
   - Ketika tombol `Change Color` pada layar pertama **(NavigationFirst)** diklik, aplikasi akan membuka layar kedua (NavigationSecond).
 
-  - Di layar kedua, terdapat tiga tombol warna: `Red`, `Green`, dan `Blue`.
+  - Di layar kedua, terdapat tiga tombol warna: `Pink`, `Green`, dan `Brown`.
 
   - Saat memilih salah satu tombol warna, misalnya tombol `Red`, aplikasi akan kembali ke layar pertama dan mengubah warna tema menjadi warna merah.
 
@@ -300,3 +300,34 @@ Dengan penanganan error ini, UI dapat memberikan umpan balik yang lebih informat
 **Jawab:**
 
 ![Screenshot books](./docs/soal16.gif)
+
+# Praktikum 9: Memanfaatkan async/await dengan Widget Dialog
+
+## **Soal 17**
+
+- Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+
+**Jawab:**
+
+- Mengklik Setiap Tombol pada AlertDialog:
+
+  - Ketika tombol `Change Color` pada layar **NavigationDialogScreen** diklik, sebuah dialog akan muncul.
+
+  - Dialog ini menampilkan pertanyaan penting dan menawarkan tiga pilihan warna: `Pink`, `Green`, dan `Brown`.
+
+  - Ketika salah satu tombol warna pada dialog diklik, warna tema pada layar utama **(NavigationDialogScreen)** akan diperbarui sesuai dengan pilihan warna.
+
+
+- Setelah memilih warna, dialog akan tertutup, dan perubahan warna akan tercermin pada latar belakang Scaffold pada layar utama.
+
+- Gantilah 3 warna pada langkah 3 dengan warna favorit Anda!
+
+**Jawab:**
+
+![Screenshot books](./docs/soal17a.png)
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 17".
+
+**Jawab:**
+
+![Screenshot books](./docs/soal17.gif)
