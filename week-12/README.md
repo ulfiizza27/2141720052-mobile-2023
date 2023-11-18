@@ -236,6 +236,7 @@ Ketika menjalankan project Flutter di browser, Flutter web menggunakan izin loka
 - Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
 
 **Jawab:**
+
 Pada praktikum sebelumnya, UI diperbarui menggunakan `setState` setelah mendapatkan posisi, sedangkan pada praktikum terbaru, UI diperbarui dengan menggunakan `FutureBuilder` yang secara otomatis mengelola pembaruan UI berdasarkan status future yang terkait.
 
 Meskipun tampilan UI pada kedua praktikum tetap sama karena memiliki penundaan yang setara (3 detik), pendekatan dengan `FutureBuilder` memberikan keuntungan dalam manajemen asinkron dan pembaruan UI tanpa memerlukan pemanggilan `setState` langsung. Ini menciptakan kode yang lebih bersih dan mudah dimengerti, khususnya saat menangani tugas asinkron seperti pengambilan lokasi.
@@ -245,3 +246,15 @@ Meskipun tampilan UI pada kedua praktikum tetap sama karena memiliki penundaan y
 ![Screenshot books](./docs/soal13.gif)
 
 - Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.
+
+## **Soal 14**
+
+- Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
+
+**Jawab:**
+
+Dengan penambahan langkah untuk menangani error pada langkah 5, sekarang UI akan menampilkan pesan "Something terrible happened!" jika terjadi kesalahan saat mendapatkan lokasi. Ini memberikan pemahaman yang lebih baik kepada pengguna ketika ada masalah dalam mendapatkan data lokasi.
+
+Dengan penanganan error ini, UI dapat memberikan umpan balik yang lebih informatif daripada hanya menampilkan elemen UI yang kosong ketika terjadi kesalahan. Hal ini memungkinkan aplikasi lebih responsif terhadap situasi yang tidak diharapkan dan membantu pengguna untuk memahami alasan ketidakberhasilan mendapatkan lokasi.
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 14".
