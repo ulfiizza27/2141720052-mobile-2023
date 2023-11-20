@@ -15,3 +15,42 @@
 ![Screenshot stream_ulfi](./docs/soal1.png)
 
 - Lakukan commit hasil jawaban Soal 1 dengan pesan "W13: Jawaban Soal 1"
+
+## **Soal 2**
+
+- Tambahkan 5 warna lainnya sesuai keinginan Anda pada variabel `colors` tersebut.
+
+**Jawab:**
+
+![Screenshot stream_ulfi](./docs/soal2.png)
+
+- Lakukan commit hasil jawaban Soal 2 dengan pesan "W13: Jawaban Soal 2"
+
+## **Soal 3**
+
+- Jelaskan fungsi keyword yield* pada kode tersebut!
+
+**Jawab:**
+Keyword `yield*` digunakan dalam Dart untuk memberikan hasil dari suatu async generator atau stream. Dalam konteks ini, yield* digunakan untuk menyediakan nilai-nilai dari suatu stream yang terus berjalan.
+
+- Apa maksud isi perintah kode tersebut?
+
+**Jawab:**
+- `Stream.periodic`: Membuat stream yang menghasilkan nilai berulang setiap durasi tertentu.
+- `const Duration(seconds: 1)`: Durasi setiap berapa detik stream akan menghasilkan nilai baru.
+- `(int t)`: Fungsi yang akan dijalankan setiap kali stream menghasilkan nilai. `t` adalah indeks waktu (dalam detik) sejak stream dimulai.
+- `int index = t % colors.length;`: Menghitung indeks warna yang akan digunakan. Ini memastikan bahwa kita tidak akan keluar dari indeks warna yang ada.
+- `return colors[index];`: Mengembalikan warna sesuai dengan indeks yang dihitung.
+- `async*`: Menandakan bahwa metode ini adalah asynchronous generator, dan `yield*` digunakan untuk mengirimkan nilai-nilai dari stream ke konsumen stream (pemanggil metode `getColors()`).
+
+- Lakukan commit hasil jawaban Soal 3 dengan pesan "W13: Jawaban Soal 3"
+
+## **Soal 4**
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+
+**Jawab:**
+
+![Screenshot stream_ulfi](./docs/soal4.gif)
+
+- Lakukan commit hasil jawaban Soal 4 dengan pesan "W13: Jawaban Soal 4"
