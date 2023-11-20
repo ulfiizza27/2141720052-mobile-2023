@@ -274,3 +274,74 @@ Penjelasan:
 ![Screenshot stream_ulfi](./docs/soal8.gif)
 
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 8".
+
+## **Soal 9**
+
+- Jelaskan maksud kode langkah 2, 6 dan 8 tersebut!
+
+**Jawab:**
+
+a. Langkah 2 (Edit initState()):
+
+```dart
+void initState() {
+    numberStream = NumberStream();
+    NumberStreamController = numberStream.controller;
+    Stream<int> stream = NumberStreamController.stream;
+    subscription = stream.listen((event) {
+      setState(() {
+        lastNumber = event;
+      });
+    });
+    super.initState();
+}
+```
+
+Penjelasan:
+- Pada langkah ini, di dalam metode `initState()`, Anda membuat sebuah objek `NumberStream`, yang mencakup stream controller (`NumberStreamController`) dan stream (`stream`).
+- Kemudian, Anda membuat sebuah subscription (`subscription`) untuk mendengarkan perubahan di dalam stream tersebut menggunakan metode `listen`. Ketika ada perubahan di dalam stream, metode `setState` dipanggil untuk memperbarui nilai `lastNumber`.
+- `super.initState()` tetap dipanggil untuk menjalankan logika dari metode `initState` pada superclass.
+
+b. Langkah 6 (Pindah ke method dispose()):
+
+```dart
+@override
+void dispose() {
+    // NumberStreamController.close();
+    subscription.cancel();
+    super.dispose();
+}
+```
+
+Penjelasan:
+- Pada langkah ini, di dalam metode `dispose()`, Anda menangani pelepasan sumber daya. Subscription (`subscription`) di-cancel untuk menghentikan pendengaran terhadap perubahan di dalam stream dan mencegah kebocoran memori.
+- Jika diperlukan, Anda dapat menggunakan `NumberStreamController.close()` untuk menutup stream controller dan menghentikan aliran data.
+
+c. Langkah 8 (Edit method addRandomNumber()):
+
+```dart
+void addRandomNumber() {
+    Random random = Random();
+    int myNum = random.nextInt(10);
+    if (!NumberStreamController.isClosed) {
+      numberStream.addNumberToSink(myNum);
+    } else {
+      setState(() {
+        lastNumber = -1;
+      });
+    }
+    // numberStream.addError();
+}
+```
+
+Penjelasan:
+- Pada langkah ini, di dalam metode `addRandomNumber()`, Anda menghasilkan angka acak dan menambahkannya ke dalam stream menggunakan metode `addNumberToSink` dari objek `numberStream`.
+- Sebelum menambahkan angka ke dalam stream, Anda memeriksa apakah stream controller (`NumberStreamController`) sudah ditutup atau belum. Jika sudah ditutup, maka nilai `lastNumber` diatur ke -1 sebagai penanganan kasus stream tertutup.
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+
+**Jawab:**
+
+![Screenshot stream_ulfi](./docs/soal9.gif)
+
+- Lalu lakukan commit dengan pesan "W13: Jawaban Soal 9".
