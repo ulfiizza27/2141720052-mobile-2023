@@ -156,3 +156,58 @@ void addRandomNumber() {
 
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 6".
 
+## **Soal 7**
+
+- Jelaskan maksud kode langkah 13 sampai 15 tersebut!
+
+**Jawab:**
+
+a. Langkah 13 (Tambahkan method `addError()` di dalam `stream.dart`):
+
+```dart
+void addError() {
+  controller.sink.addError('error');
+}
+```
+Penjelasan:
+- Method `addError()` ditambahkan ke dalam kelas `NumberStream`.
+- Metode ini digunakan untuk menambahkan pesan kesalahan ke dalam sink stream. Dengan menambahkan kesalahan, kita dapat menghasilkan event error dalam stream.
+
+b. Langkah 14 (Tambahkan method `onError` di dalam `class _StreamHomePageState`):
+
+```dart
+stream.listen((event) {
+  setState(() {
+    lastNumber = event;
+  });
+}).onError((error) {
+  setState(() {
+    lastNumber = -1;
+  });
+});
+```
+Penjelasan:
+- Kode ini menambahkan method `onError` pada hasil dari pemanggilan `listen` pada stream.
+- Jika terjadi kesalahan (error) dalam stream, method `onError` akan dijalankan, dan kita mengatur nilai `lastNumber` menjadi -1.
+
+c. Langkah 15 (Edit method `addRandomNumber()`):
+
+```dart
+void addRandomNumber() {
+  Random random = Random();
+  // int myNum = random.nextInt(10);
+  // numberStream.addNumberToSink(myNum);
+  numberStream.addError();
+}
+```
+Penjelasan:
+- Kode ini mengubah fungsi `addRandomNumber()` untuk memanggil `addError()` daripada menambahkan angka ke dalam stream.
+- Dengan memanggil `addError()`, kita memicu pembangkitan kesalahan dalam stream.
+
+- Kembalikan kode seperti semula pada Langkah 15, comment addError() agar Anda dapat melanjutkan ke praktikum 3 berikutnya.
+
+**Jawab:**
+
+![Screenshot stream_ulfi](./docs/soal7.png)
+
+- Lalu lakukan commit dengan pesan "W13: Jawaban Soal 7".
