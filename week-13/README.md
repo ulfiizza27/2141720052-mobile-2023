@@ -412,5 +412,24 @@ Dengan menggunakan `asBroadcastStream()`, stream akan mempertahankan satu salina
 
 ![Screenshot stream_ulfi](./docs/soal11.gif)
 
-
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 10,11".
+
+# Praktikum 6: StreamBuilder
+
+## **Soal 12**
+
+- Jelaskan maksud kode pada langkah 3 dan 7 !
+
+**Jawab:**
+
+a. Langkah 3: Pada langkah ini, membuat sebuah kelas bernama `NumberStream` yang memiliki metode `getNumbers()`. Metode ini mengembalikan `Stream<int>` yang menghasilkan angka acak antara 0 dan 9 setiap detiknya menggunakan `Stream.periodic`. Kode ini menggambarkan pembuatan stream yang menghasilkan angka acak setiap detik.
+
+b. Langkah 7: Pada langkah ini, menggunakan `StreamBuilder` untuk membangun antarmuka pengguna yang dapat merespons perubahan pada stream angka. Widget ini memonitor stream (`numberStream`) dan membangun ulang tampilan setiap kali ada perubahan pada stream. Jika terdapat kesalahan (`snapshot.hasError`), kemudian mencetak pesan 'Error' ke konsol. Jika ada data yang baru (`snapshot.hasData`), kemudian menampilkan data tersebut dalam widget `Text` di tengah layar. Jika tidak ada data, kemudian mengembalikan widget kosong (`SizedBox.shrink()`).
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+
+**Jawab:**
+
+![Screenshot stream_ulfi](./docs/soal12.gif)
+
+- Lalu lakukan commit dengan pesan "W13: Jawaban Soal 12".
