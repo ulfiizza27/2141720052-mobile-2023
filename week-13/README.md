@@ -275,6 +275,8 @@ Penjelasan:
 
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 8".
 
+# Praktikum 4: Subscribe ke stream events
+
 ## **Soal 9**
 
 - Jelaskan maksud kode langkah 2, 6 dan 8 tersebut!
@@ -345,3 +347,70 @@ Penjelasan:
 ![Screenshot stream_ulfi](./docs/soal9.gif)
 
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 9".
+
+# Praktikum 5: Multiple stream subscriptions
+
+## **Soal 10**
+
+- Jelaskan mengapa error itu bisa terjadi ?
+
+**Jawab:**
+
+Error "Bad state: Stream has already been listened to" terjadi karena mencoba untuk mendengarkan stream yang sudah memiliki pendengar (listener) sebelumnya. Dalam kasus ini, membuat dua subscription (`subscription` dan `subscription2`) untuk stream yang sama.
+
+Pada bagian `initState`, membuat dua subscription dengan kode berikut:
+
+```dart
+subscription = stream.listen((event) {
+  setState(() {
+    values += '$event - ';
+  });
+});
+
+subscription2 = stream.listen((event) {
+  setState(() {
+    values += '$event - ';
+  });
+});
+```
+
+Kedua subscription ini mendengarkan stream yang sama (`stream`), yang berasal dari `NumberStreamController.stream`. Ketika stream sudah memiliki pendengar (listener) dan kemudian mencoba untuk menambahkan pendengar (listener) lagi, Flutter melaporkan kesalahan ini karena suatu stream hanya dapat memiliki satu pendengar (listener).
+
+Solusi untuk menghindari kesalahan ini adalah mungkin dengan membuat satu subscription saja atau memisahkan stream menjadi dua stream terpisah jika memerlukan dua pendengar (listener) yang berbeda. Misalnya, dapat membuat dua controller stream terpisah dan dua objek stream terpisah:
+
+```dart
+NumberStreamController = NumberStream().controller;
+Stream<int> stream1 = NumberStreamController.stream;
+Stream<int> stream2 = NumberStreamController.stream;
+
+subscription = stream1.listen((event) {
+  setState(() {
+    values += '$event - ';
+  });
+});
+
+subscription2 = stream2.listen((event) {
+  setState(() {
+    values += '$event - ';
+  });
+});
+```
+
+## **Soal 11**
+
+- Jelaskan mengapa hal itu bisa terjadi ?
+
+**Jawab:**
+
+Hal ini terjadi karena menggunakan metode `asBroadcastStream()` pada objek stream (`stream`) di dalam metode `initState()`. Metode `asBroadcastStream()` mengubah stream menjadi broadcast stream, yang dapat memiliki beberapa pendengar. Namun, ketika membuat dua subscription (`subscription` dan `subscription2`), keduanya mendengarkan broadcast stream yang sama.
+
+Dengan menggunakan `asBroadcastStream()`, stream akan mempertahankan satu salinan data dan menyebarkannya kepada semua pendengar yang terdaftar. Oleh karena itu, setiap kali menambahkan nomor acak dengan memanggil `addRandomNumber()`, stream akan memancarkan data ke semua pendengar yang terdaftar, termasuk `subscription` dan `subscription2`, yang menyebabkan nilai tersebut ditambahkan dua kali pada teks.
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+
+**Jawab:**
+
+![Screenshot stream_ulfi](./docs/soal11.gif)
+
+
+- Lalu lakukan commit dengan pesan "W13: Jawaban Soal 10,11".
