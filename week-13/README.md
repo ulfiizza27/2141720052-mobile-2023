@@ -54,3 +54,45 @@ Keyword `yield*` digunakan dalam Dart untuk memberikan hasil dari suatu async ge
 ![Screenshot stream_ulfi](./docs/soal4.gif)
 
 - Lakukan commit hasil jawaban Soal 4 dengan pesan "W13: Jawaban Soal 4"
+
+## **Soal 5**
+
+- Jelaskan perbedaan menggunakan `listen` dan `await` for (langkah 9) !
+
+**Jawab:**
+
+1. Metode ChangeColor Menggunakan `listen`:
+
+```dart
+void changeColor() async {
+  colorStream.getColors().listen((eventColor) {
+    setState(() {
+      bgColor = eventColor;
+    });
+  });
+}
+```
+- Pendekatan `listen` digunakan ketika ingin terus mendengarkan perubahan pada stream tanpa harus menunggu pengiriman setiap elemen secara individual.
+
+- Fungsi `listen` menerima callback yang akan dipanggil setiap kali ada perubahan pada stream.
+
+- Ini bersifat asynchronous, dan callback dipanggil sesuai dengan perubahan pada stream.
+
+2. Metode ChangeColor Menggunakan `await for` (Langkah 9):
+
+```dart
+void changeColor() async {
+  await for (var eventColor in colorStream.getColors()) {
+    setState(() {
+      bgColor = eventColor;
+    });
+  }
+}
+```
+- Pendekatan `await for` digunakan ketika ingin menunggu dan mengambil setiap elemen dari stream satu per satu.
+
+- Ini bersifat synchronous, dan loop akan menunggu sampai ada elemen berikutnya yang dikirimkan oleh stream sebelum melanjutkan eksekusi.
+
+- `await for` cocok untuk situasi di mana ingin menanggapi setiap elemen stream secara individual.
+
+- Lakukan commit hasil jawaban Soal 5 dengan pesan "W13: Jawaban Soal 5"
