@@ -2,7 +2,7 @@
 | ----------------------------------- | -- | ---------- |
 | Ulfi Mustatiq Abidatul Izza         | 26 | 2141720052 |
 
-# Praktikum 1: Mengunduh Data dari Web Service (API)
+# Praktikum 1: Dart Streams
 
 ## **Soal 1**
 
@@ -96,3 +96,63 @@ void changeColor() async {
 - `await for` cocok untuk situasi di mana ingin menanggapi setiap elemen stream secara individual.
 
 - Lakukan commit hasil jawaban Soal 5 dengan pesan "W13: Jawaban Soal 5"
+
+# Praktikum 2: Stream controllers dan sinks
+
+## **Soal 6**
+
+- Jelaskan maksud kode langkah 8 dan 10 tersebut!
+
+**Jawab:**
+
+a. Langkah 8 (Edit initState):
+
+```dart
+@override
+void initState() {
+  numberStream = NumberStream();
+  NumberStreamController = numberStream.controller;
+  Stream<int> stream = NumberStreamController.stream;
+  stream.listen((event) {
+    setState(() {
+      lastNumber = event;
+    });
+  });
+  super.initState();
+  // colorStream = ColorStream();
+  // changeColor();
+}
+```
+- `initState` adalah metode khusus dalam widget Flutter yang dipanggil ketika widget pertama kali dibuat.
+
+- Pada langkah ini, kita membuat instance dari `NumberStream`, yang merupakan kelas untuk mengelola stream angka.
+
+- `NumberStreamController` adalah objek `StreamController<int>` yang digunakan untuk mengontrol aliran data dari stream.
+
+- Dengan mengambil stream dari `NumberStreamController`, kita menggunakan metode `listen` untuk mendengarkan perubahan pada stream tersebut.
+
+- Ketika ada perubahan pada stream (yaitu, ketika angka baru ditambahkan), metode `setState` dipanggil untuk memperbarui tampilan dengan nilai angka terbaru (`lastNumber`).
+
+b. Langkah 10 (Tambah method addRandomNumber):
+
+```dart
+void addRandomNumber() {
+  Random random = Random();
+  int myNum = random.nextInt(10);
+  numberStream.addNumberToSink(myNum);
+}
+```
+- Metode `addRandomNumber` ditambahkan untuk menambahkan angka acak ke dalam stream.
+
+- Dalam metode ini, kita menggunakan kelas `Random` untuk menghasilkan angka acak antara 0 dan 9 (`random.nextInt(10)`).
+
+- Kemudian, kita menggunakan metode `addNumberToSink` dari `numberStream` untuk menambahkan angka tersebut ke dalam sink stream, sehingga angka tersebut dapat dikirimkan ke widget dan ditampilkan di antarmuka pengguna.
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+
+**Jawab:**
+
+![Screenshot stream_ulfi](./docs/soal6.gif)
+
+- Lalu lakukan commit dengan pesan "W13: Jawaban Soal 6".
+
