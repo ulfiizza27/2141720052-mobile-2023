@@ -211,3 +211,66 @@ Penjelasan:
 ![Screenshot stream_ulfi](./docs/soal7.png)
 
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 7".
+
+# Praktikum 3: Injeksi data ke streams
+
+## **Soal 8**
+
+- Jelaskan maksud kode langkah 1-3 tersebut!
+
+**Jawab:**
+
+a. Langkah 1 (Tambahkan variabel baru):
+
+```dart
+late StreamTransformer<int, int> transformer;
+```
+
+Penjelasan:
+- Dengan menambahkan variabel `transformer`, Anda membuat sebuah objek `StreamTransformer` yang dapat digunakan untuk mengubah atau memanipulasi data yang melewati stream.
+
+b. Langkah 2 (Tambahkan kode di initState):
+
+```dart
+transformer = StreamTransformer<int, int>.fromHandlers(
+  handleData: (value, sink) {
+    sink.add(value * 10);
+  },
+  handleError: (error, trace, sink) {
+    sink.add(-1);
+  },
+  handleDone: (sink) => sink.close(),
+);
+```
+
+Penjelasan:
+- Kode ini menginisialisasi objek `transformer` dengan `StreamTransformer<int, int>.fromHandlers`.
+- Pada `handleData`, setiap nilai yang melewati stream akan dikalikan dengan 10 sebelum disalurkan ke stream berikutnya.
+- Pada `handleError`, jika terjadi kesalahan dalam stream, akan mengirimkan nilai -1 ke dalam stream.
+- Pada `handleDone`, menutup sink untuk menandakan bahwa transformasi selesai.
+
+c. Langkah 3 (Edit kode di initState):
+
+```dart
+stream.transform(transformer).listen((event) {
+  setState(() {
+    lastNumber = event;
+  });
+}).onError((error) {
+  setState(() {
+    lastNumber = -1;
+  });
+});
+```
+
+Penjelasan:
+- Dalam langkah ini, kita menggunakan objek `transformer` untuk mengubah data yang melewati stream.
+- Metode `listen` dijalankan pada hasil dari transformasi stream.
+- Jika data berhasil diolah (tanpa kesalahan), nilai `lastNumber` diperbarui sesuai dengan hasil transformasi.
+- Jika terjadi kesalahan, nilai `lastNumber` diatur menjadi -1 dalam metode `onError`.
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+
+![Screenshot stream_ulfi](./docs/soal8.gif)
+
+- Lalu lakukan commit dengan pesan "W13: Jawaban Soal 8".
