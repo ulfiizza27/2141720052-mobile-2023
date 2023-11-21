@@ -31,9 +31,18 @@
 - Jelaskan fungsi keyword yield* pada kode tersebut!
 
 **Jawab:**
+
 Keyword `yield*` digunakan dalam Dart untuk memberikan hasil dari suatu async generator atau stream. Dalam konteks ini, yield* digunakan untuk menyediakan nilai-nilai dari suatu stream yang terus berjalan.
 
 - Apa maksud isi perintah kode tersebut?
+
+```dart
+yield* Stream.periodic(
+  const Duration(seconds: 1), (int t) {
+    int index = t % colors.length;
+    return colors[index];
+});
+```
 
 **Jawab:**
 - `Stream.periodic`: Membuat stream yang menghasilkan nilai berulang setiap durasi tertentu.
