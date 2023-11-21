@@ -433,3 +433,39 @@ b. Langkah 7: Pada langkah ini, menggunakan `StreamBuilder` untuk membangun anta
 ![Screenshot stream_ulfi](./docs/soal12.gif)
 
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 12".
+
+# Praktikum 7: BLoC Pattern
+
+## **Soal 13**
+
+- Jelaskan maksud praktikum ini ! Dimanakah letak konsep pola BLoC-nya ?
+
+**Jawab:**
+
+Praktikum ini menunjukkan penggunaan BLoC (Business Logic Component) di Flutter untuk mengelola logika bisnis dan manajemen keadaan (state management). Konsep pola BLoC terletak pada penggunaan `RandomNumberBloc` yang merupakan kelas untuk mengelola logika bisnis terkait angka acak.
+
+Berikut adalah penjelasan singkat:
+
+a. **random_bloc.dart:**
+   - `RandomNumberBloc` adalah kelas yang memiliki dua `StreamController`. 
+   - `_generateRandomController` digunakan untuk input events, yaitu ketika tombol ditekan.
+   - `_randomNumberController` digunakan untuk output Stream yang mengirimkan angka acak ke `RandomScreen`.
+   - Ketika `_generateRandomController` mendengarkan event, ia menghasilkan angka acak dan mengirimkannya ke `_randomNumberController`.
+
+b. **random_screen.dart:**
+   - `RandomScreen` adalah StatelessWidget yang menangani tampilan dan interaksi pengguna.
+   - Saat tombol ditekan, `_bloc.generateRandom.add(null)` dipanggil untuk mengirimkan event ke `RandomNumberBloc`.
+   - `StreamBuilder` digunakan untuk mendengarkan perubahan pada `randomNumber` dari `RandomNumberBloc`. Saat ada perubahan, tampilan akan diperbarui dengan angka acak yang baru.
+
+c. **main.dart:**
+   - Di file `main.dart`, `MyApp` membangun aplikasi dengan menggunakan `RandomScreen` sebagai halaman utama.
+
+Pola BLoC digunakan di sini untuk memisahkan logika bisnis (mendapatkan angka acak) dari tampilan (menampilkan angka acak). Ini membantu menjaga kode tetap terorganisir dan memungkinkan pengelolaan keadaan yang baik dalam aplikasi Flutter. BLoC membantu memisahkan antara tampilan dan logika bisnis, membuat aplikasi lebih mudah diuji dan dikelola.
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+
+**Jawab:**
+
+![Screenshot stream_ulfi](./docs/soal12.gif)
+
+- Lalu lakukan commit dengan pesan "W13: Jawaban Soal 13"
